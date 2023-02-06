@@ -25,5 +25,14 @@ public class Arrays {
         for (int index = 0; index < numbers.length; index++) {
             System.out.println("Current number: " + numbers[index]);
         }
+        
+        String[] random = new String[3];
+        random[0] = "I";
+        random[1] = "like";
+        random[2] = "Java";
+
+        for (String str: random) {
+            System.out.println(str);
+        }
     }
 }
