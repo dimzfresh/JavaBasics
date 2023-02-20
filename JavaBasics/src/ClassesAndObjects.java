@@ -15,6 +15,10 @@ public class ClassesAndObjects {
         cat.sayHello();
         String info = cat.getInfo();
         System.out.println(info);
+
+        cat.setNameAndAge("Fluffy", 7);
+        String info1 = cat.getInfo();
+        System.out.println(info1);
     }
 }
 
@@ -26,6 +30,10 @@ final class Animal {
         return "Name: " + name + " " + "\nAge: " + age;
     }
 
+    void setNameAndAge(String newName, int newAge) {
+        name = newName;
+        age = newAge;
+    }
     void sayHello() {
         System.out.println("Name: " + name + " says hello");
     }
