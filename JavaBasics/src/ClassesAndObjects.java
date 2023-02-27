@@ -1,13 +1,11 @@
 public class ClassesAndObjects {
     public static void main(String[] args) {
         Animal cat = new Animal();
-        cat.name = "Cat";
-        cat.age = 3;
+        cat.setNameAndAge("Cat", 3);
         cat.sayHello();
 
         Animal dog = new Animal();
-        dog.name = "Dog";
-        dog.age = 5;
+        dog.setNameAndAge("Dog", 5);
         dog.sayHello();
 
         cat = dog;
@@ -23,18 +21,18 @@ public class ClassesAndObjects {
 }
 
 final class Animal {
-    String name;
-    int age;
+    private String name;
+    private int age;
 
     String getInfo() {
         return "Name: " + name + " " + "\nAge: " + age;
     }
 
-    void setNameAndAge(String newName, int newAge) {
+    public void setNameAndAge(String newName, int newAge) {
         name = newName;
         age = newAge;
     }
-    void sayHello() {
+    public void sayHello() {
         System.out.println("Name: " + name + " says hello");
     }
 }
