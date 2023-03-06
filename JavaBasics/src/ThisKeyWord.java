@@ -4,12 +4,15 @@ public class ThisKeyWord {
         //human.setNameAndAge("Dima", 30+);
         String info = human.getInfo();
         System.out.println(info);
+        System.out.println(Human.description);
     }
 }
 
-class Human {
+final class Human {
     private String name;
     private int age;
+
+    public final static String description = "Human";
 
     public Human() {
         System.out.println("Default constructor");
